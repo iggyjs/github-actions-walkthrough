@@ -12,7 +12,7 @@ run-debug:
 
 .PHONY: run-detached
 run-detached:
-	docker build -t github-actions-walkthrough . && docker run -dit --rm github-actions-walkthrough 
+	docker build -t github-actions-walkthrough . && docker run -dit --rm --publish 3000:3000 github-actions-walkthrough 
 
 .PHONY: clean-run-detached
 clean-run-detached:
